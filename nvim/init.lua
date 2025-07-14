@@ -10,11 +10,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
+    require 'plugins.colorscheme',
     require 'plugins.neotree',
     require 'plugins.treesitter',
     require 'plugins.telescope',
 --    require 'plugins.cpp',
 --    require 'plugins.python'
-    require 'plugins.lsp'
+--    require 'plugins.lsp'
 })
 
